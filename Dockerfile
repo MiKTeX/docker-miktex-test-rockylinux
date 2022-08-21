@@ -2,13 +2,13 @@ FROM rockylinux:9
 
 LABEL Description="MiKTeX test environment, Rocky Linux 9"
 LABEL Vendor="Christian Schenk"
-LABEL Version="22.8.20"
-
-RUN 
+LABEL Version="22.8.21"
 
 RUN \
     dnf update -y; \
-    dnf install -y epel-release; \
+    dnf install -y 'dnf-command(config-manager)'; \
+    dnf config-manager --set-enabled crb; \
+    dnf install -y epel-release epel-next-release; \
     dnf install -y \
            cmake \
            diffutils \
