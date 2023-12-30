@@ -1,9 +1,11 @@
 #!/bin/sh -e
 
+dnf update -y
+
 if [ -d /miktex/build ]; then
     dnf install -y /miktex/build/*.rpm
 else
-    rpm --import "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xD6BC243565B2087BC3F897C9277A7293F59E4889"
+    rpm --import https://miktex.org/download/key
     curl -L -o /etc/yum.repos.d/miktex.repo https://miktex.org/download/rockylinux/9/miktex.repo
     dnf -y install miktex
 fi
