@@ -1,8 +1,8 @@
-FROM rockylinux:9
+FROM rockylinux/rockylinux:10
 
-LABEL Description="MiKTeX test environment, Rocky Linux 9"
+LABEL Description="MiKTeX test environment, Rocky Linux 10"
 LABEL Vendor="Christian Schenk"
-LABEL Version="23.12.30"
+LABEL Version="25.12.29"
 
 RUN \
     dnf update -y; \

@@ -6,7 +6,7 @@ if [ -d /miktex/build ]; then
     dnf install -y /miktex/build/*.rpm
 else
     rpm --import https://miktex.org/download/key
-    curl -L -o /etc/yum.repos.d/miktex.repo https://miktex.org/download/rockylinux/9/miktex.repo
+    curl -L -o /etc/yum.repos.d/miktex.repo https://miktex.org/download/rockylinux/10/miktex.repo
     dnf -y install miktex
 fi
 

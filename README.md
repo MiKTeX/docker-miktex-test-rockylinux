@@ -1,14 +1,14 @@
-# Rocky Linux 9 docker image with MiKTeX test environment
+# Rocky Linux 10 docker image with MiKTeX test environment
 
 ## Obtaining the image
 
 Get the latest image from the registry:
 
-    docker pull miktex/miktex-test-rockylinux:9
+    docker pull miktex/miktex-test-rockylinux:10
 
 or build it yourself:
 
-    docker build --tag miktex/miktex-test-rockylinux:9 .
+    docker build --tag miktex/miktex-test-rockylinux:10 .
 
 ## Using the image
 
@@ -35,7 +35,7 @@ Run the tests:
     git clone https://github.com/MiKTeX/miktex-testing ~/work/miktex/test-suite
     docker run --rm -t \
       -v ~/work/miktex/test-suite:/miktex/test-suite:ro \
-      -v ~/work/miktex/tests/rockylinux-9:/miktex/test:rw \
+      -v ~/work/miktex/tests/rockylinux-10:/miktex/test:rw \
       -e USER_ID=`id -u` \
       -e GROUP_ID=`id -g` \
-      miktex/miktex-test-rockylinux:9
+      miktex/miktex-test-rockylinux:10
