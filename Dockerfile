@@ -2,7 +2,7 @@ FROM rockylinux:9
 
 LABEL Description="MiKTeX test environment, Rocky Linux 9"
 LABEL Vendor="Christian Schenk"
-LABEL Version="23.12.30"
+LABEL Version="26.11.16"
 
 RUN \
     dnf update -y; \
